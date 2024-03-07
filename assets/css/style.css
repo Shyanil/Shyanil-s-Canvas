@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Protest+Riot&display=swap'); /* Font style */
+/*Font colour*/
+:root {
+    --color-body:  #0b3949;
+    --color-heading: #77d4ff;
+    --color-base:  #5aea0d;
+    --color-base2:  #e9f4f6;
+    --color-brand: #e85a72;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Archivo Black";
+}
+
+
+
+h1,h2,h3,h4,h5,h6{
+   
+    color: var(--color-heading);
+    font-weight: 900;
+}
+h5.text-brand {
+    display: flex;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    width: 100%; /* Ensure the h5 takes up full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    padding-left: 0%; /* Add padding to the right for spacing */
+}
+
+@media (max-width: 767px) {
+    h5.text-brand {
+        justify-content: flex-end; /* Align to right on mobile */
+        padding-right: 0; /* Remove padding on mobile */
+    }
+}
+
+
+  
+  
+
+body{
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base),sans-serif;
+}
+a{
+    text-decoration: none;
+    color: var(--color-body);
+    transform: all 0.4s ease;
+}
+a.hover{
+    color: var(--color-brand);
+}
+img{
+    width: 100%;
+}
+.text-brand {
+    color: #f1074d;
+    border:  34px #5aea0d;
+   
+}
+
+.full-Height{
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+.navbar{
+    background-color:var(--color-base2);
+}
+.navbar .nav-link{
+    font-weight: 7900;
+    color: rgb(0, 0, 0);
+}
+/* coulur change of text when touch */
+.navbar .nav-link:hover{
+    
+    color: rgb(235, 169, 28);
+}
+/*NAVVAR*/
+@media (min-width: 992px) {
+    .navbar{
+    min-height: 100vh ;
+    width: var(--sidbar-width);
+    font-family:Georgia, 'Times New Roman', Times, serif, Arial, sans-serif;
+    font-weight: bold;
+    background: linear-gradient(rgba(90, 234, 229, 0.264),rgba(90, 234, 229, 0.264)),url(../images/sidebar-img.jpg);
+    background-size: cover;
+    background-position: center;
+    }
+    .navbar-brand img{
+        border: 10px solid rgb(1, 82, 82);
+    }
+    /* i have to # otherwise its dont create anything*/
+    #content-wrapper{
+        padding-left: var(--sidbar-width);
+    }
+    
+}
+.middle-text {
+    margin-top: 5px;
+    margin-top: 5%;
+    font-family: 'Cinzel', serif;
+    font-weight: bold; /* Make the font bold */
+    font-size: 12px;
+     /* Set the font size to 12 pixels */
+}
+
+
+.btn{
+    margin-top: 2%;
+    padding: 10px 28px;
+    font-weight: 700;
+}
+.btn-brand{
+    background-color: coral;
+    border-color: crimson;
+}
+
+.link-custom{
+    position: relative;
+
+    margin-left: 5%;
+    font-weight: 700;
+  
+}
+
+.link-custom::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-base);
+    top: 100%;
+    left: 0%;
+    position: absolute;
+    transition: all 0.4s;
+} 
+.link-custom:hover::after{
+    width: 100%;
+}
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+     /* Add space between heading and logos */
+}
+.skills-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 9px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+
+  
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #d3e9ed, #bafffd);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Keep existing transition */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    max-width: 800px; /* Limit width to prevent stretching */
+}
+
+
+.skills-container:hover {
+    transform: translateY(-5px); /* Add a slight lift on hover */
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3); /* Update box shadow on hover for a lifted effect */
+}
+.h1-font-nextpages{
+    margin-bottom: 7%;
+    font-family :Georgia, 'Times New Roman', Times, serif;
+}
+.h4-font-style{
+    margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 100%;
+    color: rgb(90, 209, 38);
+}
+.card-custom {
+    height: 400px; /* Set a fixed height for the card */
+    overflow: hidden; /* Hide any content that overflows the card */
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #fbfeff, #09dcc3f4);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Add space between cards */
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-certification {
+     
+        background: linear-gradient(135deg, #b8d0f892, #0ba8f7);
+        /* For webkit (Safari, Chrome) */
+       
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        text-align: center;
+    }
+.h4-certification-style{
+    margin-top: 5%;
+    color: rgb(43, 0, 255);
+    
+}
+    
+
+
+.btn-custom {
+    display: inline-block;
+    margin-left: 30%;
+    margin-bottom: 40%;
+    
+    padding: 6px 12px; /* Reduced padding */
+    background-color: transparent;
+    border: 2px solid #5aea0d; /* Light green color */
+    color: #5aea0d; /* Light green color */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 20px; /* Larger border radius for curved sides */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    text-decoration: none; /* Remove underline */
+}
+
+.btn-custom:hover {
+    background-color: #5aea0d; /* Darker green color on hover */
+    color: white; /* White text color on hover */
+}
+
+/* Contact section */
+/* Contact section */
+#contact {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .contact-links a {
+    margin: 0 15px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .contact-links a:hover {
+    transform: translateY(-5px);
+    opacity: 0.8;
+  }
+  
+  .contact-links img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-links img:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .resume-btn {
+    display: inline-block; /* Make the button an inline-block element */
+    margin: 0 auto; /* Center the button horizontally */
+    padding: 10px 9px; /* Add padding inside the button */
+    border-radius: 20px; /* Add rounded corners to the button */
+    text-decoration: none; /* Remove underline from the button */
+    color: #ffffff; /* Set text color to black */
+    background-color: #0b3949; /* Set background color */
+    max-width: 200px; /* Limit the width of the button */
+    margin-top: 10%;
+    align-items: center;
+    text-align: center;
+}
+
+  
+/* CSS for smaller image and centering on mobile */
+/* CSS for Desktop View */
+/* For desktop */
+@media (min-width: 992px) {
+    .navbar-brand img {
+      border: 2px solid rgb(1, 82, 82);
+      border-radius: 50%; /* to make it round */
+      margin-top: 10px; /* adjust as needed */
+    }
+  }
+  
+  /* For mobile */
+/* For mobile devices */
+/* Add this CSS to your existing stylesheet */
+
+/* For mobile devices */
+@media (max-width: 991.98px) {
+    .navbar-brand {
+      text-align: center;
+    }
+    .navbar-brand img {
+      width: 60%; /* 20% smaller */
+      display: inline-block;
+      border: 5px solid rgb(1, 82, 82); /* Border */
+      margin-top: 170px; /* Add margin to the top */
+      align-items: center;
+    }
+  }
+  
+  /* For desktop */
+  @media (min-width: 992px) {
+    .navbar-brand img {
+      width: 100%; /* Reset size for desktop */
+      border: 5px solid rgb(1, 82, 82); /* Border */
+      align-items: center;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
